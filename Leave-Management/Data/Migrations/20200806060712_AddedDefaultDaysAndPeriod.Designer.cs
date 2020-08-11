@@ -91,7 +91,7 @@ namespace Leave_Management.Data.Migrations
 
                     b.HasIndex("RequestingEmployeeId");
 
-                    b.ToTable("LeaveHistories");
+                    b.ToTable("LeaveRequests");
                 });
 
             modelBuilder.Entity("Leave_Management.Data.LeaveType", b =>
