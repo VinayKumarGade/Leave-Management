@@ -76,7 +76,7 @@ namespace Leave_Management.Controllers
         // GET: LeaveRequest/Details/5
         public ActionResult Details(int id)
         {
-            var LeaveRequest = _leaveAllocationRepo.FindById(id);
+            var LeaveRequest = _leaveRequestRepo.FindById(id);
             var model = _mapper.Map<LeaveRequestVM>(LeaveRequest);
             return View(model);
         }
@@ -203,7 +203,7 @@ namespace Leave_Management.Controllers
                     return View(model);
                 }
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("MyLeave");
             }
             catch(Exception ex)
             {
